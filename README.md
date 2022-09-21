@@ -19,7 +19,7 @@ Terminal des devs bot discord
  - *Security system available. The member must accept a rule to have access to the server.*
  - *Possibility to create a ticket as well as to delete it, to add a member or to remove one.*
  - *Possibility to create a advert for a developper research.*
- - *Members can be warned by admin. Some words and links can be blacklisted with command. Warns and the blacklist are stored in a database.
+ - *Members can be warned by admin. Some words and links can be blacklisted with command. Warns and the blacklist are stored in a database.*
  - *Migration of the bot to Discord JS.*
 
 ## **HOW TO CONFIGURE :**
