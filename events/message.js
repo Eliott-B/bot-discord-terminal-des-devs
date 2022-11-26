@@ -330,7 +330,7 @@ module.exports = async (client, message) => {
     database.connect();
     await database.query(`SELECT term FROM blacklist WHERE type = 'link'`, async (err, results) => {
         for (let i = 0; i < results.length; i++) {
-            if (message.content.includes(results[i].term)){
+            if (message.content.toLowerCase().indexOf(results[i].term)>=0){
                 let link = embed('Message blacklist','#DF1D1D',`${message.author}, ton message contenait un **lien interdit** !`,null,info.name,info.logo_link);
                 message.channel.send({embeds: [link] });
                 message.delete();
@@ -339,7 +339,7 @@ module.exports = async (client, message) => {
     });
     await database.query(`SELECT term FROM blacklist WHERE type = 'word'`, async (err, results) => {
         for (let i = 0; i < results.length; i++) {
-            if (message.content.toLowerCase().includes(results[i].term)){
+            if (message.content.toLowerCase().indexOf(results[i].term)>=0){
                 let word = embed('Message blacklist','#DF1D1D',`${message.author}, ton message contenait un **mot interdit** !`,null,info.name,info.logo_link);
                 message.channel.send({content: `${message.author} :`, embeds: [word] });
                 message.delete();

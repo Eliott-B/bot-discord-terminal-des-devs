@@ -20,7 +20,7 @@ module.exports = {
             let id = interaction.channel.name.substring(10)
             const database = db(client);
             database.connect();
-            await database.query(`UPDATE recherche SET descript="${desc}" WHERE id=${id}`, function(err, results) {
+            await database.query(`UPDATE recherche SET descript="${desc.replace(/"/g,"'")}" WHERE id=${id}`, function(err, results) {
                 if (err) {
                     console.log(err);
                     database.end();

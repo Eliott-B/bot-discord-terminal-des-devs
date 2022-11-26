@@ -422,7 +422,7 @@ module.exports = async (client, interaction) => {
                 }]
             }).then(async (channel)=> {
                 const annuler = bouton('annuler','Annuler','DANGER',null,null,false);
-                await channel.send({ components: [annuler] ,content: `>>> ${interaction.member}, écrivez la description de votre demande avec la commande : \n\`/rdesc <votre-description>\`\n*Il vous sera demander après le prix que vous voulez mettre et le niveau attendu.*` });
+                await channel.send({ components: [annuler] ,content: `>>> ${interaction.member}, écrivez la description de votre demande avec la commande : \n\`/rdesc <votre-description>\`\n*Pour retourner à la ligne faite \`\\n\`.*\n*Il vous sera demander après le prix que vous voulez mettre et le niveau attendu.*` });
                 await interaction.editReply({ content: `${interaction.member}, ton salon pour la création de ta recherche a été créé : ${channel}`, ephemeral: true });
             });
         });
@@ -466,7 +466,7 @@ module.exports = async (client, interaction) => {
                 }]
             }).then(async (channel)=> {
                 const annuler = bouton('annuler','Annuler','DANGER',null,null,false);
-                await channel.send({ components: [annuler] ,content: `>>> ${interaction.member}, écrivez la description de votre demande avec la commande : \n\`/rdesc <votre-description>\`\n*Pour retourner à la ligne faite \`\n\`.\n*Il vous sera demander après le prix que vous voulez mettre et le niveau attendu.*` });
+                await channel.send({ components: [annuler] ,content: `>>> ${interaction.member}, écrivez la description de votre demande avec la commande : \n\`/rdesc <votre-description>\`\n*Pour retourner à la ligne faite \`\\n\`.*\n*Il vous sera demander après le prix que vous voulez mettre et le niveau attendu.*` });
                 });
         });
         database.end();
