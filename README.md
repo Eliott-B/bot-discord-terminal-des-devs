@@ -21,6 +21,9 @@ Terminal des devs bot discord
  - *Possibility to create a advert for a developper research.*
  - *Members can be warned by admin. Some words and links can be blacklisted with command. Warns and the blacklist are stored in a database.*
  - *Migration of the bot to Discord JS.*
+ 
+  ### **2.0.1 :** 
+ - *Bug fixes*
 
 ## **HOW TO CONFIGURE :**
 - *Write `sudo apt-get install nodejs npm` in the terminal*
